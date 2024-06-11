@@ -41,3 +41,19 @@ my_dict = {'key1': 11, 'key2': 22}
 print(my_dict)
 d = {'k1': 111, 'k2': [1, 2, 3], 'k3': {'inKey1': 11111, 'inKey2': 22222}}
 print(d["k2"][2], d['k3']['inKey2'])
+d['k4'] = 444
+print(d)
+print(d.keys())
+print(d.values())
+print(d.items())
+
+my_tuple = ('a', 'a', 'b')
+print(my_tuple.count('a'), my_tuple.index('a'))
+
+# sets only have unique values
+my_set = set((1, 2, 3, 3, 3, 5, 4, 4, 4))
+print(my_set)
+my_set2 = {3, 4, 4, 4, 2, 1}
+print(my_set2)
+my_set3 = set('Hello')
+print(my_set3)

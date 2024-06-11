@@ -54,6 +54,7 @@ print(my_tuple.count('a'), my_tuple.index('a'))
 my_set = set((1, 2, 3, 3, 3, 5, 4, 4, 4))
 print(my_set)
 my_set2 = {3, 4, 4, 4, 2, 1}
+my_set2.add(0)
 print(my_set2)
 my_set3 = set('Hello')
 print(my_set3)

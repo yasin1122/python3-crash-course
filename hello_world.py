@@ -24,3 +24,15 @@ print("Passed!") if grade > 65 else print("Failed!")
 world = 'World'
 print(f'Hello {world}')
 print("This is {x}".format(x='Python!'))
+
+new_list = ['apple', 'blueberry']
+new_list.append('cherry')
+first_item = new_list.pop(0)
+print(new_list, first_item)
+
+num_list = [5, 4, 8, 2, 1]
+num_list.sort()
+print(num_list)
+
+my_dict = {'key1': 11, 'key2': 22}
+print(my_dict)

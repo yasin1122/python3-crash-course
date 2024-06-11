@@ -20,3 +20,7 @@ else:
   print("Failed!")
 
 print("Passed!") if grade > 65 else print("Failed!")
+
+world = 'World'
+print(f'Hello {world}')
+print("This is {x}".format(x='Python!'))

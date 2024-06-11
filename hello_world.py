@@ -33,6 +33,11 @@ print(new_list, first_item)
 num_list = [5, 4, 8, 2, 1]
 num_list.sort()
 print(num_list)
+letter_list = ['c', 'hhh', 'dd', 'k', 'fff', 'zz', 'ttt']
+letter_list.sort(reverse=True)
+print(letter_list)
 
 my_dict = {'key1': 11, 'key2': 22}
 print(my_dict)
+d = {'k1': 111, 'k2': [1, 2, 3], 'k3': {'inKey1': 11111, 'inKey2': 22222}}
+print(d["k2"][2], d['k3']['inKey2'])

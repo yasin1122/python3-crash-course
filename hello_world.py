@@ -58,3 +58,20 @@ my_set2.add(0)
 print(my_set2)
 my_set3 = set('Hello')
 print(my_set3)
+
+myFile = open('testfile.txt')
+print(myFile.read())
+
+# to read file again, you need to set cursor to 0
+print(myFile.read()) # this will print nothing
+myFile.seek(0)
+print(myFile.read())
+
+myFile.seek(0)
+print(myFile.readlines())
+myFile.close()
+
+with open('testfile.txt', mode='a') as myNewFile:
+  myNewFile.write('\nAdded new line')
+
+print(myNewFile)

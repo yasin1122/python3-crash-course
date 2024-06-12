@@ -74,4 +74,7 @@ myFile.close()
 with open('testfile.txt', mode='a') as myNewFile:
   myNewFile.write('\nAdded new line')
 
-print(myNewFile)
+with open('testfile.txt', mode='r') as sameFile:
+  theSameFile = sameFile.read()
+
+print(theSameFile)

@@ -30,3 +30,14 @@ while x > 0:
   elif x == 1:
     break
   print(x)
+
+for num in range(1, 11, 2):
+  print(num)
+
+for index, ch in enumerate('Hello'):
+  print(index, ch)
+
+list1 = [1, 2, 3, 4] # 4 is ignored
+list2 = ['a', 'b', 'c']
+for item in zip(list1, list2):
+  print(item)

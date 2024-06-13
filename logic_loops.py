@@ -54,3 +54,23 @@ print(randint(0,100))
 # id = input("enter your id: ")
 # id = int(id)
 # print(f'Your id is {id}')
+
+list_comprehension = [letter for letter in 'Hello']
+print(list_comprehension)
+
+list_comp2 = [num**2 for num in range(1, 10)]
+print(list_comp2)
+
+list_comp3 = [num for num in range(1, 11) if num%2 == 0]
+print(list_comp3)
+
+list_comp4 = ['ODD' if x%2 == 1 else "EVEN" for x in range(1, 11)]
+print(list_comp4)
+
+nested_nums = [[1, 2, 3], [4, 5]]
+for x in nested_nums:
+  for y in x:
+    print(y)
+
+list_comp5 = [x*y for x in [1, 2, 3] for y in [10, 100, 1000]]
+print(list_comp5)

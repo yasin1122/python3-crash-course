@@ -19,3 +19,14 @@ for a, *b in nested_list:
 d = {'k1':1, 'k2':2}
 for key, value in d.items():
   print(key, value)
+
+x = 5
+while x > 0:
+  x -= 1
+  if x == 4:
+    pass
+  elif x == 3:
+    continue
+  elif x == 1:
+    break
+  print(x)

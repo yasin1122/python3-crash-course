@@ -41,3 +41,16 @@ list1 = [1, 2, 3, 4] # 4 is ignored
 list2 = ['a', 'b', 'c']
 for item in zip(list1, list2):
   print(item)
+
+print('x' in list2)
+print('k1' in d, 2 in d.values())
+print(min(num_list), max(num_list))
+
+from random import shuffle, randint
+shuffle(list1)
+print(list1)
+print(randint(0,100))
+
+# id = input("enter your id: ")
+# id = int(id)
+# print(f'Your id is {id}')

@@ -1,6 +1,6 @@
 st = 'Print only the words that start with s in this sentence'
 for word in st.split():
-  if word[0] == 's':
+  if word[0].lower() == 's':
     print(word)
 
 even_nums = [x for x in range(0,11,2)]

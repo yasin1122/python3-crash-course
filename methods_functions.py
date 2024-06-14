@@ -22,3 +22,14 @@ init_list = [' ', 'O', ' ']
 shuffle(init_list)
 print(init_list)
 
+def get_sum(*args):
+  return sum(args)
+print(get_sum(1, 2, 3))
+
+def get_laker(**kwargs):
+    if 'laker' in kwargs:
+        print(f"{kwargs['laker']} is a Laker.")
+    else:
+        print('No Laker players were found.')
+
+get_laker(bull='Jordan', laker='Kobe')

@@ -117,6 +117,8 @@ def count_primes(num):
 
 print(count_primes(100))
 
+# This is suppose to be broken down into a dictionary of lines
+
 letter_a = "  *  \n" + \
            " * * \n" + \
            "*****\n" + \

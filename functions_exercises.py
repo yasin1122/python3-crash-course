@@ -6,59 +6,36 @@ def lesser_of_two_evens(a, b):
   
 print(lesser_of_two_evens(4, 8))
 
-def animal_crackers(a, b):
-  if a[0] == b[0]:
-    return True
-  else:
-    return False
+def animal_crackers(text):
+  wordlist = text.lower().split()
+  return wordlist[0][0] == wordlist[1][0]
   
-print(animal_crackers('Hello', 'Howdy'))
+print(animal_crackers('Hello howdy'))
 
 def makes_twenty(a, b):
-  if a == 20 or b == 20 or a+b == 20:
-    return True
-  else:
-    return False
+  return a == 20 or b == 20 or a+b == 20
 
 print(makes_twenty(-20, 40))
 
 def old_macdonald(name):
-  counter = 1
-  new_name = ''
-
-  for ch in name:
-    if counter == 1 or counter == 4:
-      new_name +=  ch.upper()
-    else:
-      new_name += ch
-
-    counter += 1
-    
-  return new_name
+  return name[:3].capitalize() + name[3:].capitalize()
 
 print(old_macdonald('macdonald'))
 
 def master_yoda(sentence):
-  return sentence.split()[::-1]
+  return ' '.join(sentence.split()[::-1])
 
 print(master_yoda('Hello how are you'))
 
 def almost_there(num):
-  if abs(100-num) <= 10 or abs(200-num) <= 10:
-    return True
-  else:
-    return False
+  return abs(100-num) <= 10 or abs(200-num) <= 10
   
 print(almost_there(199))
 
 def has_33(nums):
-  counter = 0
-  nums.append(0)
-
-  for num in nums:
-    if num == 3 and nums[counter+1] == 3:
+  for i in range(len(nums)-1):
+    if nums[i] == 3 and nums[i+1] == 3:
       return True
-    counter += 1
 
   return False
 
@@ -67,7 +44,7 @@ print(has_33([3, 1, 3]))
 def paper_doll(text):
   new_text = ''
   for ch in text:
-    new_text += ch + ch + ch
+    new_text += ch*3
 
   return new_text
 

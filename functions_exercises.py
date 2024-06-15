@@ -117,7 +117,8 @@ def count_primes(num):
 
 print(count_primes(100))
 
-# This is suppose to be broken down into a dictionary of lines
+# These letters should be made up of lines in a dictionary,
+# So each line pattern can be called to form the letters.
 
 letter_a = "  *  \n" + \
            " * * \n" + \

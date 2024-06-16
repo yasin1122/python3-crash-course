@@ -33,3 +33,23 @@ def get_laker(**kwargs):
         print('No Laker players were found.')
 
 get_laker(bull='Jordan', laker='Kobe')
+
+def square(num):
+   return num**2
+
+nums_list = [1, 2, 3, 4, 5]
+
+for num in map(square, nums_list):
+   print(num)
+
+squared_nums = list(map(square, nums_list))
+print(squared_nums)
+
+def check_odd(num):
+   return num%2==1
+
+odd_nums = list(filter(check_odd, nums_list))
+print(odd_nums)
+
+square = lambda num: num**2
+print(square(4))

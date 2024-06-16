@@ -59,3 +59,4 @@ print(cubed_nums)
 
 even_nums = list(filter(lambda num: num%2 == 0, nums_list))
 print(even_nums)
+

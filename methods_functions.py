@@ -53,3 +53,9 @@ print(odd_nums)
 
 square = lambda num: num**2
 print(square(4))
+
+cubed_nums = list(map(lambda num: num**3, nums_list))
+print(cubed_nums)
+
+even_nums = list(filter(lambda num: num%2 == 0, nums_list))
+print(even_nums)

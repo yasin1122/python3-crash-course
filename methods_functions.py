@@ -60,3 +60,13 @@ print(cubed_nums)
 even_nums = list(filter(lambda num: num%2 == 0, nums_list))
 print(even_nums)
 
+outer_num = 5
+
+def inner_func():
+   global outer_num
+   print(outer_num)
+   outer_num = 55
+
+print(outer_num)
+inner_func()
+print(outer_num)

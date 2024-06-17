@@ -11,23 +11,23 @@ def range_check(num, low, high):
 print(range_check(5, 2, 7))
 
 def upper_lower(string):
-  upper_count = 0
-  lower_count = 0
+  dict = {'upper': 0, 'lower': 0}
   for ch in string:
     if ch.isupper():
-      upper_count += 1
+      dict['upper'] += 1
     elif ch.islower():
-      lower_count += 1
-  print(f'Upper: {upper_count}, Lower: {lower_count}')
+      dict['lower'] += 1
+  print(f"Upper: {dict['upper']}, Lower: {dict['lower']}")
 
 upper_lower('Hello Mr. Rogers, how are you this fine Tuesday?')
 
 def unique_list(nums):
-  unique_list = []
-  for num in nums:
-    if num not in unique_list:
-      unique_list.append(num)
-  return unique_list
+  # unique_list = []
+  # for num in nums:
+  #   if num not in unique_list:
+  #     unique_list.append(num)
+  # return unique_list
+  return list(set(nums))
 
 print(unique_list([1,1,1,1,2,2,3,3,3,3,4,5]))
 
@@ -42,12 +42,14 @@ def multiply(nums):
 print(multiply([1, 2, 3, -4]))
 
 def palindrome(str):
-  for i in range(int(len(str)/2)):
-    if str[i] != str[-(i+1)]:
-      return False
-    return True
+  str = str.replace(' ', '')
+  # for i in range(int(len(str)/2)):
+  #   if str[i] != str[-(i+1)]:
+  #     return False
+  #   return True
+  return str == str[::-1]
 
-print(palindrome('helleh'))
+print(palindrome('nurses run'))
 
 from string import ascii_lowercase
 

@@ -1,5 +1,5 @@
 # This is a classic tic tac toe game
-# Jun26 start reviewing 
+# Jun26
 
 def get_input():
   user_choice = ''

@@ -18,3 +18,9 @@ def average(*args):
   return sum(args)/len(args)
 
 print(average(1, 2, 3, 4))
+
+def say_hello(**kwargs):
+  for key, value in kwargs.items():
+    print(key, value)
+
+say_hello(me='yasin', mywife='beyza')

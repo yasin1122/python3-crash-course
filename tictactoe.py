@@ -7,3 +7,8 @@ def get_input():
   return user_choice
 
 print('it works again')
+
+nums = [1, 2, 3]
+def square(num):
+  return num * num
+print(list(map(square, nums)))

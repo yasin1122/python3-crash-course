@@ -9,10 +9,12 @@ def get_input():
 print('it works again')
 
 nums = [1, 2, 3]
-def square(num):
-  return num * num
+square = lambda num: num**2
 print(list(map(square, nums)))
 
-def check_even(num):
-  return num%2 == 0
-print(list(filter(check_even, nums)))
+print(list(filter(lambda num: num%2==0, nums)))
+
+def average(*args):
+  return sum(args)/len(args)
+
+print(average(1, 2, 3, 4))

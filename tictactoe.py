@@ -24,3 +24,8 @@ def say_hello(**kwargs):
     print(key, value)
 
 say_hello(me='yasin', mywife='beyza')
+
+# Ask the first player 
+
+import random
+print(random.choice(nums))

@@ -1,31 +1,47 @@
 # This is a classic tic tac toe game
-# Jun28 
 
-def get_input():
-  user_choice = ''
-# add logic to the game
-  return user_choice
+# Ask the first player X or O and choose position
+# Print the board
+# Ask the 2nd player to choose position
 
-print('it works again')
+# print the board
+positions = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+player1_choices = []
+player2_choices = []
+choices = ['X', 'O']
+horizontal_line = ' 1 | 2 | 3 '
+vertical_line = '-----------------'
+winning_positions = [(0, 1, 2), (3, 4, 5), (6, 7, 8),
+                     (0, 3, 6), (1, 4, 7), (2, 5, 8),
+                     (0, 4, 8), (2, 4, 6)]
 
-nums = [1, 2, 3]
-square = lambda num: num**2
-print(list(map(square, nums)))
+# print the current board
+def print_board(choice):
+    positions[choice-1] = 'X'
+    for i in range(len(positions)):
+        if i==2 or i==5:
+            print(' ', positions[i], '  ')
+            print(vertical_line)
+        elif i==8:
+            print(' ', positions[i], '  \n\n')
+        else:
+            print(' ', positions[i], end='  |')
 
-print(list(filter(lambda num: num%2==0, nums)))
+print_board(1)
+print_board(2)
 
-def average(*args):
-  return sum(args)/len(args)
+# import random
+# print(random.choice([1,2]))
 
-print(average(1, 2, 3, 4))
+# check if a player won
+def win_check(player_choices):
+    for winning_tuple in winning_positions:
+        if (winning_tuple[0] in player_choices and
+            winning_tuple[1] in player_choices and
+            winning_tuple[2] in player_choices):
+            return True
+    return False
 
-def say_hello(**kwargs):
-  for key, value in kwargs.items():
-    print(key, value)
+win_check([8, 3, 4, 0, 7])
 
-say_hello(me='yasin', mywife='beyza')
-
-# Ask the first player 
-
-import random
-print(random.choice(nums))
+print((1, 2, 3) not in [0, 1, 2, 3])

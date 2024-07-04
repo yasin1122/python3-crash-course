@@ -4,7 +4,8 @@ class Animal():
         print("Animal Created!!!")
     
     def eat(self):
-        print("I am eating!")
+        raise NotADirectoryError(
+            "Subclass must implement abstract method")
 
 
 class Bird(Animal):
@@ -14,6 +15,12 @@ class Bird(Animal):
     def __init__(self, breed='unidentified') -> None:
         Animal.__init__(self)
         self.breed = breed
+
+    def __str__(self) -> str:
+        return f"The breed of this bird is {self.breed}."
+    
+    def __del__(self):
+        print("This bird obj has been deleted.")
 
     def fly(self, name):
         print(f"{name}, a {self.breed}, is flying" + 
@@ -25,3 +32,5 @@ class Bird(Animal):
 my_bird = Bird(breed='Parakeet')
 my_bird.fly("Tombik")
 my_bird.eat()
+print(my_bird)
+del my_bird

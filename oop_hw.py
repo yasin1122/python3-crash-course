@@ -4,6 +4,11 @@ class Line:
         self.c2 = c2
 
     def distance(self):
+        """
+        Could've done tuple unpacking as such:
+        x1, y1 = self.c1
+        x2, y2 = self.c2
+        """
         return ((self.c2[0] - self.c1[0])**2 + 
                  (self.c2[1] - self.c1[1])**2) ** 0.5
 

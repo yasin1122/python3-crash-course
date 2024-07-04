@@ -10,21 +10,25 @@ player_X_choices = []
 player_Y_choices = []
 choices = ['X', 'Y']
 horizontal_line = ' 1 | 2 | 3 '
-vertical_line = '-----------------'
+vertical_line = '+-----+-----+-----+'
 winning_positions = [(0, 1, 2), (3, 4, 5), (6, 7, 8),
                      (0, 3, 6), (1, 4, 7), (2, 5, 8),
                      (0, 4, 8), (2, 4, 6)]
 
 # print the current board
 def print_board():
+    print(vertical_line)
     for i in range(len(positions)):
         if i==2 or i==5:
-            print(' ', positions[i], '  ')
+            print(' ', positions[i], ' |')
             print(vertical_line)
         elif i==8:
-            print(' ', positions[i], '  ')
+            print(' ', positions[i], ' |')
+        elif i==0 or i==3 or i==6:
+            print('| ', positions[i], end='  |')
         else:
             print(' ', positions[i], end='  |')
+    print(vertical_line)
 
 # import random
 # print(random.choice([1,2]))

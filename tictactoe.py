@@ -38,8 +38,6 @@ def win_check(player_choices):
             return True
     return False
 
-win_check([8, 3, 4, 0, 7])
-
 # get user input and fill player choices
 def fill_choices(player_choices, ch):
     user_input = None
@@ -53,7 +51,7 @@ def fill_choices(player_choices, ch):
                 print(prompt)
                 user_input = None
             else:
-                player_choices.append(user_input)
+                player_choices.append(user_input-1)
                 if ch == 'X':
                     positions[user_input - 1] = 'X'
                 elif ch == 'Y':
@@ -62,6 +60,30 @@ def fill_choices(player_choices, ch):
             print(error, prompt)
             user_input = None
 
-fill_choices(player_X_choices, 'X')
-fill_choices(player_Y_choices, 'Y')
-print(player_X_choices, player_Y_choices)
+# play the game
+def play_game():
+    game_running = True
+    turn_X = True
+    turn_counter = 0
+    while game_running:
+        if turn_counter >= 9:
+            print("---It's a TIE, Try Playing Again---")
+            game_running = False
+        elif turn_X:
+            print("---Player X's Turn---")
+            fill_choices(player_X_choices, 'X')
+            if win_check(player_X_choices):
+                game_running = False
+                print("Player X WON!!!")
+            turn_X = False
+            turn_counter += 1
+        else:
+            print("---Player Y's Turn---")
+            fill_choices(player_Y_choices, 'Y')
+            if win_check(player_Y_choices):
+                game_running = False
+                print("Player Y WON!!!")
+            turn_X = True
+            turn_counter += 1
+
+play_game()

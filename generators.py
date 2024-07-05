@@ -8,3 +8,4 @@ print(cube_list)
 # Generators are memory efficient
 for x in create_cubes(10):
     print(x, end=' ')
+

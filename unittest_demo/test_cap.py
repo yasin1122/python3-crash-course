@@ -7,6 +7,9 @@ import unittest
 import cap
 
 class TestCap(unittest.TestCase):
+    """
+    Contains functions to test cap.py
+    """
 
     def test_one_word(self):
         """

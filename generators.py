@@ -20,3 +20,7 @@ print(next(current_fib))
 print(next(current_fib))
 print(next(current_fib))
 print(next(current_fib))
+
+iter_str = iter("Hello")
+print(next(iter_str), next(iter_str),
+      next(iter_str), next(iter_str), next(iter_str))

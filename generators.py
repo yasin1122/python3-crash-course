@@ -7,12 +7,16 @@ for x in create_cubes(10):
     print(x, end=' ')
 print()
 
-def gen_fib(n):
+def gen_fib():
     a, b = 1, 1
-    for i in range(n):
+    for i in range(5):
         yield a
         # tuple matching avoids temp var
         a, b = b, a+b
 
-for i in gen_fib(5):
-    print(i, end=' ')
+current_fib = gen_fib()
+print(next(current_fib))
+print(next(current_fib))
+print(next(current_fib))
+print(next(current_fib))
+print(next(current_fib))

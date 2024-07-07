@@ -36,4 +36,17 @@ import os
 print(os.getcwd())
 
 # Datetime Module
+import datetime
 
+mytime = datetime.time(2, 20, 33) # hour, minute, seconds
+mytime = mytime.replace(hour = 4)
+print(mytime.minute, mytime)
+
+today = datetime.date.today()
+print(today, today.ctime())
+
+day_date = datetime.datetime.today()
+print(day_date)
+
+date1 = datetime.date(1988, 11, 22)
+print(date1.month)

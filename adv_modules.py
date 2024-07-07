@@ -50,3 +50,20 @@ print(day_date)
 
 date1 = datetime.date(1988, 11, 22)
 print(date1.month)
+
+# Math and Random Modules
+import math
+# help(math)
+math.pi
+
+import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+print(random.randint(0, 100), 
+      random.choice(letters),
+      # can pick the same choice MORE than once
+      random.choices(population=letters, k=3),
+      # can ONLY pick each choice ONCE
+      random.sample(population=letters, k=3),
+      # floating point random number
+      random.uniform(a=0, b=10))
+random.shuffle(letters)

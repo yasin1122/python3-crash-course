@@ -67,3 +67,11 @@ print(random.randint(0, 100),
       # floating point random number
       random.uniform(a=0, b=10))
 random.shuffle(letters)
+
+# Python Debugger
+import pdb # python debugger
+"""
+pdb.set_trace()
+print(10 / 0)
+# q to quit
+"""

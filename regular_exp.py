@@ -11,3 +11,10 @@ print(phone.group())
 phone_pattern = re.compile(r'(\d{3})-(\d{3})-(\d{4})')
 results = re.search(phone_pattern, text)
 print(results.group(1))
+
+# search for either cat or dog
+re.search(r'cat|dog', 'The cat is here')
+# . (period) is the wild card character
+re.findall(r'.at', 'The cat in the hat went splat.')
+# ^ (starts with), $ (ends with) search
+# r[^\d] excludes all digits

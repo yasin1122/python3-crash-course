@@ -27,3 +27,12 @@ sc = s.copy()
 s.add(5)
 print(s.difference(sc), s.difference_update(sc),
       s.discard(1), s.intersection(sc))
+
+# Advanced Dictionaries
+
+d = {'k1': 1, 'k2': 2}
+print({x:x**2 for x in range(5)})
+
+# .keys(), .values(), .items()
+for key, value in d.items():
+    print(key, value)

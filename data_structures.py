@@ -25,4 +25,5 @@ s = s.clear # clears the set
 s = {1, 2, 3, 4}
 sc = s.copy()
 s.add(5)
-print(s.difference(sc))
+print(s.difference(sc), s.difference_update(sc),
+      s.discard(1), s.intersection(sc))

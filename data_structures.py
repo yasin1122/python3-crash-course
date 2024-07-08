@@ -13,3 +13,16 @@ print(s.capitalize(), s.upper(), s.count('o'),
       s.isspace(), s.istitle(), s.isupper(),
       s.endswith('d'), '\n', s.split('o'),
       s.partition('o'))
+
+# Advanced Sets
+
+s = set()
+s.add(1)
+s.add(2)
+s.add(2) # no duplicates
+print(s)
+s = s.clear # clears the set
+s = {1, 2, 3, 4}
+sc = s.copy()
+s.add(5)
+print(s.difference(sc))

@@ -36,3 +36,11 @@ print({x:x**2 for x in range(5)})
 # .keys(), .values(), .items()
 for key, value in d.items():
     print(key, value)
+
+# Advanced Lists
+list1 = [1, 2, 2, 2, 3, 3, 5, 4, 9, 7]
+list1.extend([4, 3, 2, 1])
+print(list1.count(2), list1.index(4), 
+      list1.insert(4, 4))
+
+# reverse, remove

@@ -4,7 +4,6 @@
 #
 #
 #
-#
 # Ask the first player X or O and choose position
 # Print the board
 # Ask the 2nd player to choose position
